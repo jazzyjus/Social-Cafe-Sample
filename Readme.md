@@ -32,9 +32,9 @@ If you encounter any problems:
 **Notes**
 
 
- * There will be three Beverages in our app - Latte, Iced Mocha and Earl Grey Tea. The definitions of the beverages are defined in the og meta properties in the individual pages in the app.
+ * There are three Beverages in our app - Latte, Iced Mocha and Earl Grey Tea. The definitions of the beverages are defined in the og meta properties in the individual pages in the app.
 
- * There will be three BeverageCategory categories in our app - Coffee, Tea and Soda. The definitions of the categories are defined in the og meta properties under the /types folder.
+ * There are three BeverageCategory categories in our app - Coffee, Tea and Soda. The definitions of the categories are defined in the og meta properties under the /types folder.
 
 
 
