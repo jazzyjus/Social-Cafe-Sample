@@ -13,7 +13,7 @@ In addition, please make sure that you've created the following objects and acti
     * Drink is an action that is connected to a Beverage
 
  * **Objects: Beverage, BeverageCategory**
-   * Add a custom property 'category' to Beverage which points to a BeverageCategory object type.
+   * Add a custom property 'category' to Beverage and set it to the BeverageCategory object type.
 
  
 
