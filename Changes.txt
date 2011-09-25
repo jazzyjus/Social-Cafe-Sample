@@ -1,0 +1,11 @@
+
+Changes from the 9/22 code
+==========================
+
+Sept 24, 2011 (jazzyjus)
+------------------------------
+- Externalized and consolidated - appid, namespace and app url into products.php
+- Changed ext of files under /types (beveragecategories) to .php to benefit from externalization of variables in products.php
+- Changed og:title from coffee to respective categories in tea.html/soda.html
+- Readme text refered to BeverageType - switched to BeverageCategory
+- Added more verbiage in Readme to clarify some concepts
