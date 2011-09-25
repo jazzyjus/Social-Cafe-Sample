@@ -15,7 +15,6 @@
 * under the License.
 */
 
-
   require_once('products.php');
 
 ?>
@@ -34,14 +33,6 @@
 
   </head>
   <body>
-
-   <script>
-     function submitForm(index) {
-		document.forms[0].elements[0].value=index;
-		document.forms[0].submit();
-     };
-   </script>
-
   <div class="header" > 
     <h1><a href="<?php echo $app_url; ?>"><img src="img/cafe.jpg" width="135px" height="100px" /> Social Cafe</a></h1>
     <div class="controls"><a href="<?php echo $facebook->getLoginUrl( array( 'scope' => 'publish_stream, publish_actions') ); ?>">Login</a> <a href="<?php echo $facebook->getLogoutUrl(); ?>">Logout</a></div>
@@ -51,41 +42,27 @@
       <div class="top_msg">
 
 <?php
-       if(!$facebook->getUser()) {
-         echo '<a href="' . $facebook->getLoginUrl( array( 'scope' => 'publish_stream, publish_actions') ) . '">Login</a>';
-       } else {
+    // Require unauthenticated users to login to view product but allow Facebook's Open Graph 
+    // to retrieve the og properties  
+   if(!$facebook->getUser()) {
+     echo '<a href="' . $facebook->getLoginUrl( array( 'scope' => 'publish_stream, publish_actions') ) . '">Login</a>';
+   } else {
 ?>
-		<?php
-                  if($_GET["at"]) {
-                    echo '<p><pre>access token: ' . $facebook->getAccessToken() . '</pre></p>';
-                  }
 
-		  if(isset($_POST['product'])) {
-		    $idx = $_POST['product'];
-		    try {
-		      echo '<p>You are enjoying a ' . $products[$idx]['name'] . '.</p>';
-		      publishCustomAction($facebook, $products[$idx]);
-		    } catch (FacebookApiException $e) {
-		      echo '<p>There was a problem with your purchase. Please <a href="' . $facebook->getLoginUrl( array( 'scope' => 'publish_stream, publish_actions') ) . '">Login</a> again.';
-		    }
-		  } else {
-                     echo "<p>Earl Grey Tea</p>";
-                  }
-		?>
 
+    <p>Earl Grey Tea</p>
 		<p>Would you like One? </p>
-
       </div>
 
 
 	  <div class="item">
-		<a href="javascript:submitForm(2);"><img src="img/earlgrey1.gif" width="70px" /> Earl Grey Tea </a>
+		<a href="javascript:document.forms[0].submit();"><img src="img/earlgrey1.gif" width="70px" /> Earl Grey Tea </a>
 	  </div>
 
      <br />
      <p style="font-size: 14px">Images are licensed under <a href="http://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a> from flickr users: mattb4rd, kennymatic, jackbrodus.</p>
 
-	<form action="/index.php" method="post" > <input name="product" type="hidden" value="foobar" /></form>
+	<form action="index.php" method="post" > <input name="product" type="hidden" value="2" /></form>
 	</div>
      <?php } ?>
 

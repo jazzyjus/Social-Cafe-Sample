@@ -9,3 +9,5 @@ Sept 24, 2011 (jazzyjus)
 - Changed og:title from coffee to respective categories in tea.html/soda.html
 - Readme text refered to BeverageType - switched to BeverageCategory
 - Added more verbiage in Readme to clarify some concepts
+
+- Cleanup unused code on icedmocha.php, latte.php, earlgrey.php
