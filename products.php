@@ -19,7 +19,7 @@
 include_once('php-sdk/facebook.php');
 
 
-$app_url = "http://YOUR_APP_URL";
+$app_url = "https://YOUR_APP_URL";
 $app_id = "YOUR_APP_ID";
 $app_secret = "YOUR_APP_SECRET";
 $app_namespace = "YOUR_APP_NAMESPACE";
