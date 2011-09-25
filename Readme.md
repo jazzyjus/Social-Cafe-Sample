@@ -13,7 +13,7 @@ In addition, please make sure that you've created the following objects and acti
     * Drink is an action that is connected to a Beverage
 
  * **Objects: Beverage, BeverageCategory**
-   * Add a 'category' custom property to Beverage which points to a BeverageCategory object type.
+   * Add a custom property 'category' to Beverage which points to a BeverageCategory object type.
 
  
 
@@ -38,7 +38,7 @@ If you encounter any problems:
 
 
 
- * The Quickest way to setup your actions and objects is as follows:
+ * The quickest way to setup your actions and objects is as follows:
    * Under Open Graph, click on "Getting Started"
    * Specify - People can [drink] a [beverage] - then complete the wizard without changing anything. This will create a Drink action and a Beverage object and link them together.
    * Click on Dashboard and create the BeverageCategory object type.
