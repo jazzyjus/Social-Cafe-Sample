@@ -18,8 +18,12 @@
 
 include_once('php-sdk/facebook.php');
 
+
+$app_url = "http://YOUR_APP_URL";
 $app_id = "YOUR_APP_ID";
 $app_secret = "YOUR_APP_SECRET";
+$app_namespace = "YOUR_APP_NAMESPACE";
+
 
 $facebook = new Facebook( array(
                            'appId' => $app_id,
@@ -28,19 +32,19 @@ $facebook = new Facebook( array(
 
 $products = array(
   array(
-    'url' => 'http://social-cafe.herokuapp.com/latte.php',
+    'url' => $app_url.'/latte.php',
     'name' => 'Cafe Latte',
     'description' => 'Its hot',
     'price' => 2.85,
   ),
   array(
-    'url' => 'http://social-cafe.herokuapp.com/icedmocha.php',
+    'url' => $app_url.'/icedmocha.php',
     'name' => 'Iced Mocha',
     'description' => 'Cold & Sweet',
     'price' => 3.25
   ),
   array(
-    'url' => 'http://social-cafe.herokuapp.com/earlgrey.php',
+    'url' => $app_url.'/earlgrey.php',
     'name' => 'Earl Grey Tea',
     'description' => 'Smells amazing.',
     'price' => 2.55

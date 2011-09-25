@@ -18,7 +18,8 @@
   require_once('products.php');
 
 function publishCustomAction($facebook, $product) {
-    $ret_obj = $facebook->api('/me/social-cafe:drink', 'post', array(
+  global $app_namespace;
+    $ret_obj = $facebook->api('/me/'.$app_namespace.':drink', 'post', array(
                       'beverage' => $product['url'],
                     ));
 
@@ -43,7 +44,7 @@ function publishCustomAction($facebook, $product) {
    </script>
 
   <div class="header" > 
-    <h1><a href="http://social-cafe.herokuapp.com/"><img src="img/cafe.jpg" width="135px" height="100px" /> Social Cafe</a></h1>
+    <h1><a href="<?php echo $app_url; ?>"><img src="img/cafe.jpg" width="135px" height="100px" /> Social Cafe</a></h1>
     <div class="controls"><a href="<?php echo $facebook->getLoginUrl( array( 'scope' => 'publish_stream, publish_actions') ); ?>">Login</a> <a href="<?php echo $facebook->getLogoutUrl(); ?>">Logout</a></div>
   </div>
 

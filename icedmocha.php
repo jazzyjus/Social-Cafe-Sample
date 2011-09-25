@@ -21,13 +21,13 @@
 ?>
 <head prefix="og: http://ogp.me/ns# social-cafe: http://ogp.me/ns/apps/social-cafe#">
     <title>Iced Mocha Coffee</title>
-                      <meta property="og:title" content="Iced Mocha" />
-                                <meta property="og:determiner" content="an" />
-                                <meta property="fb:app_id" content="138483919580948" />
-                                <meta property="og:image" content="http://social-cafe.herokuapp.com/img/kyoto_sq.gif" />
-                                <meta property="og:url" content="http://social-cafe.herokuapp.com/icedmocha.php" />
-                                <meta property="og:type" content="social-cafe:beverage" />
-                                <meta property="social-cafe:category" content="http://social-cafe.herokuapp.com/types/coffee.html"> 
+      <meta property="og:title" content="Iced Mocha" />
+      <meta property="og:determiner" content="an" />
+      <meta property="fb:app_id" content="<?php echo $app_id; ?>" />
+      <meta property="og:image" content="<?php echo $app_url; ?>/img/kyoto_sq.gif" />
+      <meta property="og:url" content="<?php echo $app_url; ?>/icedmocha.php" />
+      <meta property="og:type" content="<?php echo $app_namespace; ?>:beverage" />
+      <meta property="<?php echo $app_namespace; ?>:category" content="<?php echo $app_url; ?>/types/coffee.php"> 
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel=StyleSheet href="css/sc.css" type="text/css" />
 
@@ -42,7 +42,7 @@
    </script>
 
   <div class="header" > 
-    <h1><a href="http://social-cafe.herokuapp.com/"><img src="img/cafe.jpg" width="135px" height="100px" /> Social Cafe</a></h1>
+    <h1><a href="<?php echo $app_url; ?>"><img src="img/cafe.jpg" width="135px" height="100px" /> Social Cafe</a></h1>
     <div class="controls"><a href="<?php echo $facebook->getLoginUrl( array( 'scope' => 'publish_stream, publish_actions') ); ?>">Login</a> <a href="<?php echo $facebook->getLogoutUrl(); ?>">Logout</a></div>
   </div>
 
